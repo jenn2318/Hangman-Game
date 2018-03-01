@@ -1,0 +1,99 @@
+body {
+	background-color: gray;
+}
+
+.header {
+	background-color: black;
+	text-align: center;
+	padding: 20px;
+}
+
+.container{
+	border-style:dashed;
+	height: 500px;	
+}
+
+.content{
+	border-style: dashed;
+	margin: 50px;
+	float:right;
+	height: 100px;
+}
+
+h1 {
+	color: orchid;
+	font-size: 40px;
+}
+
+h2 {
+	color: orchid;
+	margin: 20px;
+	font-size: 40px;
+	background-color: black;
+	border-style: solid;
+	border-width: 5px;
+}
+
+
+
+p {
+	font-size: 28px;
+	text-align: center;
+}
+
+
+.underscore{
+	border: 2px solid black;
+	font-size: 100px;
+	text-align: center;
+	margin: 0 auto;
+	height: 100px;
+	width: 80px;
+}
+.animation {
+
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    animation-name: JP;
+    animation-duration: 4s;
+}
+
+    @keyframes JP {
+    0%   {background-color:orchid; left:0px; top:0px;}
+    25%  {background-color:purple; left:200px; top:0px;}
+    50%  {background-color:pink; left:200px; top:200px;}
+    75%  {background-color:#4aaaa5; left:0px; top:200px;}
+    100% {background-color:grey; left:0px; top:0px;}
+   }
+
+
+ #animation{
+ 	float: right;
+ 	width: 100px;
+    height: 100px;
+    background-color: white;
+    animation-name: JP;
+    animation-duration: 4s;
+ }
+
+ #fashion-info{
+ border-style:dashed;
+ }
+
+
+#photo-size{
+	margin:0 auto;
+	padding: 15px;
+}
+
+
+ #gameinfo{
+   float:right;
+   border-style:dashed;
+   padding-right: 20px;
+ }
+
+ #footer{
+ 	text-align: center;
+ }
