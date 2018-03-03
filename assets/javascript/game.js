@@ -125,14 +125,6 @@ guessesLeft--;
 
 }
 
-
-//To look at guesses left
- document.getElementByID('guessesLeft').textContent = guessesLeft;
-
-
- //reset guess
- incorrectLetter = []
- guessesLeft = 10;
 //=======================================================================================================
      
 // At Game Play Music Starts
@@ -144,22 +136,14 @@ function playStartMusic () {
   myGameStart.start ();
 }
 
+playStartMusic();
 //======================================================================================================
-
-guessesLeft = 11
-
-if (numberOfGuesses++) {
-        score.innerHTML = numberOfGuesses;
-        evaluateGuessesLeft();
-
 }
 
-document.getElementbyID('guessesLeft').innerHTML = guessesLeft;
-
-
-
 //Check to see if letters are correct-player's guesses/ and determines guesses left
+guessesLeft = 10;
 
+function evaluateGuessesLeft() {
 
  if(randomWord.indexOf(playerGuess) > -1)
 {
@@ -172,10 +156,23 @@ document.getElementbyID('guessesLeft').innerHTML = guessesLeft;
 }
  else{
 
-      playerGuessI.push(playerGuess);
-      console.log(incorrectLetter);
-	}
+      playerGuessI.push(playerGuess) {
+       underScores[i] = playerGuesss
+  }
 }
+
+evaluateGuessesLeft();
+
+
+document.getElementbyID('guessesLeft').innerHTML = guessesLeft;
+
+//To look at guesses left....or look at doing it this way
+ // document.getElementByID('guessesLeft').textContent = guessesLeft;
+
+
+ //reset guess
+ incorrectLetter = []
+ guessesLeft = 10;
 
 
 // If the letter is wrong do nothing until user gets letter correct with guesses left
@@ -205,7 +202,7 @@ function FlashImage() {
 
 // If user guesses correct word user score increases by 1 and indicates a win that increases win attempts
 
-function checkForWin() {
+function checkWin() {
     for (var i = 0; i < fashionWords.length; i++) {
         if (randomWordArray[i] != "null") {
             return false;
@@ -216,6 +213,7 @@ function checkForWin() {
     winCount++;
 }
 
+function alertWinner()
 if (correctLetter == radomWord.length){
   alert('You Are A Winner');
   location.reload();
@@ -223,12 +221,12 @@ if (correctLetter == radomWord.length){
   }
 
 }
-
+alertWinner();
 
 
 //If user guesses incorrect word user score decreases and indicates a loss that increases on loss attempts 
 
-function checkForLoss() {
+function checkLoss() {
     if (playerGuess == 0) {
         playerGuess += 1;
         return true;
@@ -237,7 +235,10 @@ function checkForLoss() {
     lossCount++;
 }
 
+function alertLoss(){
  if (guessesLeft < 1){
     alert('You Lost, Time To Try Again!');
     location.reload();
   }
+
+alertLoss();
