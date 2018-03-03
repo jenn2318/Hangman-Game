@@ -20,17 +20,7 @@ var playerGuessI = [];
 var randomWord = [];
 
 //Array of words for the game...the answers
-// var fashionWords = ['peplum'
-//                      'lace','leather','houndstooth','midi','shortalls','pumps','oxfords'];
-
-var fashionWords = [peplum
-                   lace
-                   leather
-                   houndstooth
-                   midi
-                   shortalls
-                   pumps
-                   oxfords];
+var fashionWords = ['peplum','lace','leather','houndstooth','midi','shortalls','pumps','oxfords'];
 
 //Spaces for the letters to appear, while playing
 var underScore = [];
@@ -71,11 +61,10 @@ var myMusic
 
 function playGameRandomWord() {
 
- var randomWord = fashionWords[Math.floor(Math.random)() * fashionWords.length)];
+ var randomWord = fashionWords[Math.floor(Math.random()) * fashionWords.length];
   return; randomWord;
-}
 
-for (var i = 0; i < randomWord.length i++) {
+for (var i = 0; i < randomWord.length; i++) {
 
      
      underScore.push(' _ ');
@@ -95,15 +84,11 @@ for (var i = 0; i < randomWord.length i++) {
 playGameRandomWord();
 
 
-document.onkeyup = function(event)
-{
+document.onkeyup = function(event){
  var playerGuess = event.key;
 
-  console.log(playerGuess.toUpperCase())};
-
-
-if (randomWord.indexOf(playerGuess) > -1)
-{
+  console.log(playerGuess.toUpperCase())
+  if (randomWord.indexOf(playerGuess) > -1){
 //Checks to see if the letter exists inside of the word
    
       if (randomWord[i] == playerGuess)
@@ -115,10 +100,8 @@ if (randomWord.indexOf(playerGuess) > -1)
 
 }
 
-else
-
-{
-playerGuessI.push(playerGuess);
+else { 
+  playerGuessI.push(playerGuess);
 guessesLeft--;
 
    }
@@ -138,7 +121,7 @@ function playStartMusic () {
 
 playStartMusic();
 //======================================================================================================
-}
+
 
 //Check to see if letters are correct-player's guesses/ and determines guesses left
 guessesLeft = 10;
@@ -156,9 +139,8 @@ function evaluateGuessesLeft() {
 }
  else{
 
-      playerGuessI.push(playerGuess) {
-       underScores[i] = playerGuesss
-  }
+      playerGuessI.push(playerGuess)
+       // underScores[i] = playerGuesss
 }
 
 evaluateGuessesLeft();
@@ -189,13 +171,9 @@ if (event.key == true) {
 
 //IMAGES To make images not appear, but appear when user guesses correct and guesses incorrect
 //============================================================================================
-function FlashImage() {
-     while (true) {
-           showImage = true;
-           yield WaitForSeconds(0.2secs;
-           showImage = false
-           yield WaitForSeconds(0.3secs);
-    }
+function showImage() {
+    var img = document.getElementById('photo-size');
+    img.style.visibility = 'visible';
 }
 
 //===========================================================================================
@@ -204,17 +182,21 @@ function FlashImage() {
 
 function checkWin() {
     for (var i = 0; i < fashionWords.length; i++) {
-        if (randomWordArray[i] == fashionWords.length; i++) {
+        if (randomWordArray[i] == fashionWords.length) {
+           console.log(true);
             return true;
         }
     }
     game.playerGuess += 1;
+
     return true;
     winCount++;
 }
 
-function alertWinner()
-if (correctLetter == radomWord.length){
+checkWin();
+
+function alertWinner(){
+if (playerGuessC == randomWord[0]){
   alert('You Are A Winner');
   location.reload();
 
@@ -228,7 +210,7 @@ alertWinner();
 
 function checkLoss() {
    for (var i = 0; i < fashionWords.length; i++) {
-        if (randomWordArray[i] != fashionWords.length; i++) {
+        if (randomWordArray[i] != fashionWords.length) {
             return false;
         }
     }
