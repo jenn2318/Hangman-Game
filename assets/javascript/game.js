@@ -204,8 +204,8 @@ function FlashImage() {
 
 function checkWin() {
     for (var i = 0; i < fashionWords.length; i++) {
-        if (randomWordArray[i] != "null") {
-            return false;
+        if (randomWordArray[i] == fashionWords.length; i++) {
+            return true;
         }
     }
     game.playerGuess += 1;
@@ -227,6 +227,11 @@ alertWinner();
 //If user guesses incorrect word user score decreases and indicates a loss that increases on loss attempts 
 
 function checkLoss() {
+   for (var i = 0; i < fashionWords.length; i++) {
+        if (randomWordArray[i] != fashionWords.length; i++) {
+            return false;
+        }
+    }
     if (playerGuess == 0) {
         playerGuess += 1;
         return true;
