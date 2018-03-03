@@ -2,20 +2,23 @@
 // ===============================================
 var wins = 0
 var losses = 0
-var guessesleft = 9;
+var guessesLeft = 9;
 var playerGuess = [];
 var randomWord;
-var fashionWords = ['peplum','lace','leather','houndstooth','midi','shortalls','pumps','linen']
+var fashionWords = ['peplum','lace','leather','houndstooth','midi','shortalls','pumps','oxfords']
 var incorrectLetter = [];
 var correctLetter = [];
 var underScores
 var winCount = 0
 var lossCount = 0
+var myObstacles = [];
+var mySound;
+var myMusic
 
 
 
 
-// Generate a Random Word and store it in a variable 
+// Generate Random Words and store them in a variable....an Array?
 // Game start
 // Make underscores
 //Determine if player guesses for the letters are correct
@@ -28,19 +31,73 @@ console.log(randomWord);
 
 }
 
+//Prompt start to game
+
+playGame();
+
+document.onkeyup = function(event)
+{
+  playerGuess = event.key;
+if (randomWord.indexOf(playerGuess) > -1)
+{
+
 for (var i = 0; i < randomWord.length i++)
 {
-	underScores.push('_');
+	
+   if (randomWord[i] == playerGuess)
+   {
+     underScores[i] = playerGuess;
+     console.log(underScores); 
 
-	return underScore;
+   } 
+
+   //To get underScores to show up 
+
+ document.getElementbyID('word').textContent = underScores.join("");
+
 }
+
+  else if {
+    
+   (randomWord[i] !-- playerGuess);
+   underScores [i] = playerGuess;
+  
+  {
+    incorrectLetter.push(playerGuess);
+    guessesLeft--;
+    console.log(guessesLeft);
+
+
+  }
+ 
+
+//To look at guesses left
+ document.getElementByID('guessesLeft').textContent = guessesLeft;
+
+
+ //reset guess
+ incorrectLetter = []
+ guessesLeft = 9;
+
+
+//   underScores.push('_');
+
+// 	return underScore;
+// }
      
+// At Game Play Music Starts
+
+function playStartMusic () {
+
+  myMusic = new sound ("deepHouse1.wav");
+  myMusic.play ();
+  myGameStart.start ();
+}
+
 
 document.getElementById('letter-blank').innerHTML = underScores.join(" ");
 console.log(underScores);
 
-correctLetter = [];
-incorrectLetter = [];
 guessesLeft = 11
 
 }
@@ -60,7 +117,7 @@ document.onkeyup = function(event)
  if(randomWord.indexOf(playerGuess) > -1)
 {
 
-  if (randomWord[0] === playerGuess)
+  if (randomWord[0] == playerGuess)
    {
     underScores[i] = playerGuess;
     console.log(underScores);
@@ -77,11 +134,33 @@ document.onkeyup = function(event)
 }
 
 
-function win(){
 
-	if (winCount === radomWord.lenth)		
+//Reset Game
+
+
+
+
+
+
+
+// function win(){
+
+	if (correctLetter == radomWord.length);		
+{
+  alert('You Are A Winner');
+  window.location.reload();
+
+  }
+
 }
-  alert('Winner');
+ 
+ 
+{
+  if (guessesLeft < 1){
+    document.getElementByID('WORD')inner.HTML == fashionWords;
+    alert('You Lost, Time To Try Again!');
+    window.location.reload();
+  }
 
 // while (plaerGuess !-- randomWord) ()
 
