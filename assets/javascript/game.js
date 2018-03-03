@@ -238,7 +238,6 @@ function checkForLoss() {
 }
 
  if (guessesLeft < 1){
-    document.getElementByID('WORD')inner.HTML == fashionWords;
     alert('You Lost, Time To Try Again!');
     location.reload();
   }
