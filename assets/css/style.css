@@ -12,7 +12,7 @@ body {
 
 .container{
 	border-style:dashed;
-	height: 500px;	
+	height: 600px;	
 
 }
 
@@ -55,7 +55,7 @@ h2 {
 .spacing {
 	position: absolute;
 	left: 65px;
-	bottom: 20px;
+	bottom: 10px;
 	width: 45%;
 	height: 35%;
 	border-style:dashed;
@@ -67,6 +67,9 @@ p {
 	text-align: center;
 }
 
+#hideaway {
+	display: none;
+}
 
 .underscore{
 	border: 2px solid black;
@@ -116,9 +119,10 @@ p {
 
  #gameinfo{
  position: absolute;
- right: 50px;
-   border-style:dashed;
-   padding-right: 20px;
+ right: -450px;
+ top: 10px;
+ border-style:dashed;
+ padding-right: 20px;
  }
 
  #footer{

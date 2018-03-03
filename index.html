@@ -7,16 +7,19 @@
 <link rel="stylesheet" type="text/css" href="Hangman-Game/assets/reset.css">
 
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
 
 <header>
+
 <div class="animation">
+	</div>
+	<div id="animation">
 </div>
-<div id="animation">
-</div>
-<div class="header">
+   
+ <div class="header">
 	<h1>HANGMAN FASHION</h1>
 </div>
 </header>
@@ -28,25 +31,35 @@
 	<br>
 	<strong>"Can you guess all the outfits before you're out of guesses?, Let's see how far you get!"</strong>
 	<br><br>
+
 </div>
+
 
 <!-- <div id="letter-blank">_ _ _ _ _</div> -->
 <br>
-<!-- <div class ="correctLetter">correct letter</div>
-<br>
-<div class ="incorrectLetter">incorrect letter</div>
- -->
-<div class="fashion-photos" id="photo-size">
 
-	<!-- <img src="assets/images/High Waist.jpg">
-	<img src="assets/images/Shades.jpg"> -->
+<!-- <div class="fashion-photos" id="photo-size">
+	<div id="hideaway" style="display:none;">Here's the hidden content</div>
+	<img src="assets/images/Peplum.jpg">
+	<img src="assets/images/Houndstooth.jpg">
+	<img src="assets/images/Midi.jpg">
+	<img src="assets/images/Shortalls.jpg">
+	<img src="assets/images/Pumps.jpg">
+	<img src="assets/images/Oxfords.jpg">
+	<img src="assets/images/Shades.jpg">
+</div> -->
+
+	
 </div> 
 
 <br><br>
 
 <div class="spacing">
-<h1 id="word" class="word-description">-----------</h1>
-</div>
+	<div id="letters">
+	<p>"You have 10 guesses in total"</p>
+	<h1 id="word" class="word-description">_ _ _ _ _ _ _ _</h1>
+ </div>
+
 
 <div id="gameinfo">
 <p>Press any key to play!</p>
@@ -66,19 +79,17 @@
 
 </div>
 
-<!-- <div id="footer">
-       <p> Game by Jennifer Ponder</p>
-    </div>
- -->
+<div id="footer">
+   <p> Game by Jennifer Ponder</p>
+ </div>
+
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 
 
 
 
 
-
-
-
-
-</body>
+  </body>
 </html>
